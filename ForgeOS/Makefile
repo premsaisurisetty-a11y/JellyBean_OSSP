@@ -1,11 +1,14 @@
-CC = gcc
-CFLAGS = -Wall -Wextra -O2
-LIBS = -lncurses
+CC=gcc
+CFLAGS=-Wall -Wextra -O2 -pthread
+LDFLAGS=-lncurses -pthread
 
-TARGET = forgeos
+all: forgeos
 
-all:
-	$(CC) $(CFLAGS) main.c -o $(TARGET) $(LIBS)
+forgeos: main.c
+	$(CC) $(CFLAGS) main.c -o forgeos $(LDFLAGS)
 
 clean:
-	rm -f $(TARGET)
+	rm -f forgeos
+
+run: forgeos
+	./forgeos

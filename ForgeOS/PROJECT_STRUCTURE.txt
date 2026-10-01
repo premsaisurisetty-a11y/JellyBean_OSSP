@@ -1,0 +1,8 @@
+ForgeOS_Final
+├── main.c                 Core C implementation
+├── Makefile               Build/clean/run commands
+├── README.md              Setup and usage
+├── CO_MAPPING.md          CO1-CO6 mapping
+├── DEMO_STEPS.md          Presentation demo
+├── PROJECT_STRUCTURE.txt  File overview
+└── forgeos                Built executable (after make)
